@@ -1,0 +1,635 @@
+@font-face {
+    font-family: MyFont;
+    src: url('./fonts/Ubuntu-Regular.ttf');
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: hsl(206, 100%, 92%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: MyFont;
+}
+
+.stepMain {
+    width: 45%;
+    height: 60vh;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    background: hsl(0, 0%, 100%);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.steps {
+    width: 30%;
+    padding: 20px;
+    background: url('./images/bg-sidebar-desktop.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+
+.stepDesc {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.stepName {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.stepName p {
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin-bottom: 2px;
+    color: hsl(229, 24%, 87%);
+}
+
+.stepName h5 {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: hsl(0, 0%, 100%);
+}
+
+.stepNum {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid rgb(246, 242, 242);
+    color: hsl(0, 0%, 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+
+.currentStep {
+    color: black;
+    background-color: hsl(206, 89%, 81%);
+    border: none;
+    font-weight: bold;
+}
+
+.stepTwo {
+    display: none;
+}
+
+.stepThree {
+    display: none;
+}
+
+.stepFour {
+    display: none;
+}
+
+.stepConfirmed {
+    display: none;
+}
+
+
+.step {
+    width: 70%;
+    position: relative;
+    padding: 30px 50px;
+}
+
+.step h1 {
+    margin-bottom: 3px;
+    color: hsl(213, 96%, 18%);
+    font-weight: bold;
+}
+
+.stepDescription {
+    margin-bottom: 20px;
+    color: hsl(240, 0%, 56%);
+    font-size: 12px;
+
+}
+
+.step form {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.step label {
+    color: hsl(213, 98%, 33%);
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+.step form input {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 2px solid hsla(0, 0%, 56%, 0.338);
+    border-radius: 5px;
+}
+
+.labels {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    font-family: MyFont;
+}
+
+.stepThankYou {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.stepThankYou h1 {
+    font-weight: bold;
+    font-size: 26px;
+    letter-spacing: 2px;
+    color: hsl(213, 96%, 18%);
+    margin-top: 10px;
+}
+
+.stepThankYou p {
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: hsl(240, 0%, 56%);
+    margin-top: 10px;
+    text-align: center;
+}
+
+::placeholder {
+    font-family: MyFont;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: hsla(0, 0%, 49%, 0.499);
+}
+
+.nextBack {
+    width: 80%;
+    position: absolute;
+    bottom: 20px;
+    right: 50px;
+}
+
+.nextBackBtns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nextBackBtnsS1 {
+    display: flex;
+    justify-content: end;
+}
+
+
+.nextBack p {
+    text-decoration: none;
+    color: hsla(0, 0%, 35%, 0.499);
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.nextBtn {
+    width: 80px;
+    height: 35px;
+    border-radius: 8px;
+    background: hsl(213, 96%, 18%);
+    color: white;
+    font-family: MyFont;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.s1Back {
+    display: none;
+}
+
+.billOptions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.billOption {
+    height: 140px;
+    width: 31%;
+    border-radius: 7px;
+    padding: 10px;
+    border: 1px solid rgba(129, 129, 129, 0.492);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.billOption img {
+    width: 40px;
+    height: 40px;
+}
+
+.option {
+    color: hsl(213, 98%, 33%);
+    font-size: 13px;
+    margin-bottom: 4px;
+    font-weight: 600;
+}
+
+.price {
+    color: hsl(240, 0%, 56%);
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.monthsFree {
+    color: hsl(214, 94%, 25%);
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 2px;
+}
+
+.selected {
+    background: hsla(207, 79%, 89%, 0.39);
+    border: 1px solid #030e75;
+}
+
+.selectedAdd {
+    background: hsla(207, 79%, 89%, 0.39);
+    border: 1px solid #030e75;
+}
+
+.toggle {
+    margin-top: 20px;
+    margin-bottom: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    background-color: #dcdff3ad;
+    border-radius: 7px;
+}
+
+.monthlyGray {
+    color: hsl(240, 0%, 56%);
+    font-size: 14px;
+}
+
+.monthly {
+    color: hsl(214, 94%, 25%);
+    font-size: 14px;
+}
+
+.yearlyGray {
+    color: hsl(240, 0%, 56%);
+    font-size: 14px;
+}
+
+.yearly {
+    color: hsl(214, 94%, 25%);
+    font-size: 14px;
+}
+
+
+
+.checkbox-wrapper-2 {
+    margin: 0 20px;
+}
+
+.checkbox-wrapper-2 .ikxBAC {
+    appearance: none;
+    background-color: #030e75;
+    border-radius: 72px;
+    border-style: none;
+    flex-shrink: 0;
+    height: 20px;
+    margin: 0;
+    position: relative;
+    width: 40px;
+}
+
+.checkbox-wrapper-2 .ikxBAC::before {
+    bottom: -6px;
+    content: "";
+    left: -6px;
+    position: absolute;
+    right: -6px;
+    top: -6px;
+}
+
+.checkbox-wrapper-2 .ikxBAC,
+.checkbox-wrapper-2 .ikxBAC::after {
+    transition: all 100ms ease-out;
+}
+
+.checkbox-wrapper-2 .ikxBAC::after {
+    background-color: #fff;
+    border-radius: 50%;
+    content: "";
+    height: 14px;
+    left: 3px;
+    position: absolute;
+    top: 3px;
+    width: 14px;
+}
+
+.checkbox-wrapper-2 input[type=checkbox] {
+    cursor: default;
+}
+
+/* .checkbox-wrapper-2 .ikxBAC:hover {
+    background-color: #c9cbcd;
+    transition-duration: 0s;
+  } */
+
+.checkbox-wrapper-2 .ikxBAC:checked {
+    background-color: #030e75;
+}
+
+.checkbox-wrapper-2 .ikxBAC:checked::after {
+    background-color: #fff;
+    left: 24px;
+}
+
+.checkbox-wrapper-2 :focus:not(.focus-visible) {
+    outline: 0;
+}
+
+.checkbox-wrapper-2 .ikxBAC:checked:hover {
+    background-color: #030e75;
+}
+
+/*Step three checkbox*/
+
+.checkbox {
+    cursor: pointer;
+    height: 65px;
+    width: 100%;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(142, 141, 141, 0.458);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.checkbox div {
+    height: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.darkBlue {
+    margin-bottom: 3px;
+    color: hsl(213, 96%, 18%);
+}
+
+.checkbox div p {
+    font-size: 12px;
+    color: hsl(240, 0%, 56%);
+}
+
+.lightBlue {
+    margin-bottom: 3px;
+    color: hsl(213, 98%, 36%);
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.checkServices {
+    width: 100%;
+    height: 150px;
+    background: hsla(227, 50%, 93%, 0.679);
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.checkPlan {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(189, 187, 187, 0.504);
+    color: hsl(213, 96%, 18%);
+}
+
+.selectedPlan h5 {
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.selectedPlan p {
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.checkAdd-ons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.add-ons {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.add-ons p {
+    font-size: 15px;
+    font-weight: 500;
+    color: hsl(240, 0%, 56%);
+    margin-bottom: 8px;
+}
+
+.add-ons-prices p {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: hsl(213, 96%, 18%);
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.total p {
+    font-weight: 500;
+    font-size: 16px;
+    color: hsl(240, 0%, 56%);
+}
+
+.total h4 {
+    color: hsl(213, 98%, 36%);
+    font-weight: 600;
+}
+
+@media screen and (max-width: 1000px) {
+    body {
+        background: #fff;
+    }
+
+    .stepMain {
+        width: 90%;
+        height: 80vh;
+        flex-direction: column;
+        position: relative;
+        background: hsla(203, 100%, 79%, 0.338);
+    }
+
+    .steps {
+        width: 100%;
+        padding: 20px;
+        background: url('./images/bg-sidebar-mobile.svg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .stepName {
+        display: none;
+    }
+
+    .step {
+        height: 55vh;
+        width: 90%;
+        position: absolute;
+        top: 15%;
+        left: 5%;
+        background: hsl(0, 0%, 100%);
+        border-radius: 10px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        padding: 20px 10px;
+    }
+
+    .step h1 {
+        font-size: 30px;
+    }
+
+    .nextBtn {
+        position: absolute;
+        right: -55px;
+    }
+
+    .billOptions {
+        display: flex;
+        justify-content: start;
+        flex-direction: column;
+    }
+
+    .billOption {
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+
+    .billOption img {
+        margin-right: 20px;
+        width: 25px;
+        height: 25px;
+    }
+
+    .toggle {
+        margin-top: 0;
+    }
+
+    .nextBack {
+        position: absolute;
+        bottom: -45px;
+        right: 55px;
+    }
+
+    .checkbox {
+        height: 70px;
+        margin-bottom: 20px;
+    }
+
+    .checkServices {
+        height: 150px;
+    }
+
+    .selectedPlan h5 {
+        font-size: 18px;
+    }
+
+    .selectedPlan p {
+        font-size: 18px;
+    }
+
+    .add-ons p {
+        font-size: 16px;
+    }
+
+    .total {
+        margin-top: 20px;
+    }
+
+    .total p {
+        font-size: 18px;
+    }
+
+    .stepThankYou {
+        height: 55vh;
+        width: 90%;
+        position: absolute;
+        top: 15%;
+        left: 5%;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    }
+
+}

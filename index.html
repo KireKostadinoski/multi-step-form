@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi step form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="stepMain stepOne" id="stepOne">
+        <div class="steps">
+
+            <div class="stepDesc">
+                <div class="currentStep stepNum">
+                    <p>1</p>
+                </div>
+                <div class="stepName">
+                    <p>STEP 1</p>
+                    <h5>YOUR INFO</h5>
+                </div>
+            </div>
+            <div class="stepDesc">
+                <div class="stepNum">
+                    <p>2</p>
+                </div>
+                <div class="stepName">
+                    <p>STEP 2</p>
+                    <h5>SELECT PLAN</h5>
+                </div>
+            </div>
+            <div class="stepDesc">
+                <div class="stepNum">
+                    <p>3</p>
+                </div>
+                <div class="stepName">
+                    <p>STEP 3</p>
+                    <h5>ADD-ONS</h5>
+                </div>
+            </div>
+            <div class="stepDesc">
+                <div class="stepNum">
+                    <p>4</p>
+                </div>
+                <div class="stepName">
+                    <p>STEP 4</p>
+                    <h5>SUMMARY</h5>
+                </div>
+            </div>
+
+        </div>
+        <div class="step">
+            <h1>Personal info</h1>
+            <p class="stepDescription">Please provide your name, email adress and phone number</p>
+            <form action="">
+                <div class="labels"><label for="">Name</label>
+                    <p id="invalidName" class="error"></p>
+                </div>
+                <input type="text" placeholder="e.g. Stephen King" id="userName">
+                <div class="labels"> <label for="">Email Adress</label>
+                    <p id="invalidEmail" class="error"></p>
+                </div>
+                <input type="text" placeholder="e.g. stephenking@lorem.com" id="userEmail">
+                <div class="labels"> <label for="">Phone Number</label>
+                    <p id="invalidPhoneNo" class="error"></p>
+                </div>
+                <input type="number" name="" id="" placeholder="e.g. +123 456 789" id="userPhoneNo">
+            </form>
+            <div class="nextBack">
+                <div class="nextBackBtns nextBackBtnsS1">
+                    <p href="#" class="s1Back">Go Back</p>
+                    <div class="nextBtn" id="toStepTwo">Next step</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="stepMain stepTwo" id="stepTwo">
+        <div class="steps">
+
+            <div class="stepDesc">
+                <div class="stepNum">
+                    <p>1</p>
+                </div>
+                <div class="stepName">
+                    <p>STEP 1</p>
+                    <h5>YOUR INFO</h5>
+                </div>
+            </div>
+            <div class="stepDesc">
+                <div class="currentStep stepNum">
+                    <p>2</p>
+                </div>
+                <div class="stepName">
+                    <p>STEP 2</p>
+                    <h5>SELECT PLAN</h5>
+                </div>
+            </div>
+            <div class="stepDesc">
+                <div class="stepNum">
+                    <p>3</p>
+                </div>
+                <div class="stepName">
+                    <p>STEP 3</p>
+                    <h5>ADD-ONS</h5>
+                </div>
+            </div>
+            <div class="stepDesc">
+                <div class="stepNum">
+                    <p>4</p>
+                </div>
+                <div class="stepName">
+                    <p>STEP 4</p>
+                    <h5>SUMMARY</h5>
+                </div>
+            </div>
+
+        </div>
+        <div class="step">
+            <h1>Select your plan</h1>
+            <p class="stepDescription">You have the option of mounthly or yearly billing</p>
+            <div class="billOptions">
+                <div class="billOption" id="planArcade" name="Arcade" value="9">
+                    <img src="./images/icon-arcade.svg" alt="">
+                    <div>
+                        <h4 class="option">Arcade</h4>
+                        <h4 class="price" id="arcadePrice">$9/mo</h4>
+                        <p id="monthsFreeAr" class="monthsFree"></p>
+                    </div>
+                </div>
+                <div class="billOption" id="planAdvanced" name="Advanced" value="12">
+                    <img src="./images/icon-advanced.svg" alt="">
+                    <div>
+                        <h4 class="option">Advanced</h4>
+                        <h4 class="price" id="advancedPrice">$12/mo</h4>
+                        <p id="monthsFreeAdv" class="monthsFree"></p>
+
+                    </div>
+                </div>
+                <div class="billOption" id="planPro" name="Pro" value="15"> 
+                    <img src="./images/icon-pro.svg" alt="">
+                    <div>
+                        <h4 class="option">Pro</h4>
+                        <h4 class="price" id="proPrice">$15/mo</h4>
+                        <p id="monthsFreePro" class="monthsFree"></p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="toggle">
+                <h3 class="monthly monthlyGray" id="monthlyPayment">Monthly</h3>
+                <div class="checkbox-wrapper-2">
+                    <input type="checkbox" class="sc-gJwTLC ikxBAC" id="paymentToggle">
+                </div>
+                <h3 class="yearlyGray" id="yearlyPayment">Yearly</h3>
+            </div>
+            <div class="nextBack">
+                <div class="nextBackBtns">
+                    <p href="#" id="backToStepOne">Go Back</p>
+                    <div class="nextBtn stepNextBtn" id="toStepThree">Next step</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="stepMain stepThree" id="stepThree">
+        <div class="steps">
+
+            <div class="stepDesc">
+                <div class=" stepNum">
+                    <p>1</p>
+                </div>
+                <div class="stepName">
+                    <p>STEP 1</p>
+                    <h5>YOUR INFO</h5>
+                </div>
+            </div>
+            <div class="stepDesc">
+                <div class="stepNum">
+                    <p>2</p>
+                </div>
+                <div class="stepName">
+                    <p>STEP 2</p>
+                    <h5>SELECT PLAN</h5>
+                </div>
+            </div>
+            <div class="stepDesc">
+                <div class="currentStep stepNum">
+                    <p>3</p>
+                </div>
+                <div class="stepName">
+                    <p>STEP 3</p>
+                    <h5>ADD-ONS</h5>
+                </div>
+            </div>
+            <div class="stepDesc">
+                <div class="stepNum">
+                    <p>4</p>
+                </div>
+                <div class="stepName">
+                    <p>STEP 4</p>
+                    <h5>SUMMARY</h5>
+                </div>
+            </div>
+
+        </div>
+        <div class="step">
+            <h1>Pick add-ons</h1>
+            <p class="stepDescription">Add-ons help enhance your gaming experience.</p>
+            <div class="checkbox" >
+                <input type="checkbox" id="onlineServiceCheckboxInput">
+                <div>
+                    <h5 class="darkBlue">Online Service</h5>
+                    <p>Access to multiplayer games</p>
+                </div>
+                <div>
+                    <h5 class="lightBlue" id="onlineServicePrice">+1$/mo</h5>
+                </div>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="largerStorageCheckboxInput">
+                <div>
+                    <h5 class="darkBlue">Larger storage</h5>
+                    <p>Extra 1TB of cloud save</p>
+                </div>
+                <div>
+                    <h5 class="lightBlue" id="largerStoragePrice">+2$/mo</h5>
+                </div>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="customizableProfileCheckboxInput">
+                <div>
+                    <h5 class="darkBlue">Customizable profile</h5>
+                    <p>Custom theme on your profile</p>
+                </div>
+                <div>
+                    <h5 class="lightBlue" id="customizableProfilePrice">+2$/mo</h5>
+                </div>
+            </div>
+            <div class="nextBack">
+                <div class="nextBackBtns">
+                    <p href="#" id="backToStepTwo">Go Back</p>
+                    <div class="nextBtn stepNextBtn" id="toStepFour">Next step</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="stepMain stepFour" id="stepFour">
+        <div class="steps">
+
+            <div class="stepDesc">
+                <div class="stepNum">
+                    <p>1</p>
+                </div>
+                <div class="stepName">
+                    <p>STEP 1</p>
+                    <h5>YOUR INFO</h5>
+                </div>
+            </div>
+            <div class="stepDesc">
+                <div class="stepNum">
+                    <p>2</p>
+                </div>
+                <div class="stepName">
+                    <p>STEP 2</p>
+                    <h5>SELECT PLAN</h5>
+                </div>
+            </div>
+            <div class="stepDesc">
+                <div class="stepNum">
+                    <p>3</p>
+                </div>
+                <div class="stepName">
+                    <p>STEP 3</p>
+                    <h5>ADD-ONS</h5>
+                </div>
+            </div>
+            <div class="stepDesc">
+                <div class="currentStep stepNum">
+                    <p>4</p>
+                </div>
+                <div class="stepName">
+                    <p>STEP 4</p>
+                    <h5>SUMMARY</h5>
+                </div>
+            </div>
+
+        </div>
+        <div class="step">
+            <h1>Finishing up</h1>
+            <p class="stepDescription">Double-check everything looks OK before confirming</p>
+            
+            <div class="checkServices">
+              <div class="checkPlan">
+                <div class="selectedPlan">
+                    <h5 id="selectedPlanName">Arcade (Monthly)</h5>
+                    <p id="changeSelection">Change</p>
+                </div>
+                <div>
+                    <h5 id="selectedPlanPrice">$9/mo</h5>
+                </div>
+              </div>
+              <div class="checkAdd-ons">
+                <div class="add-ons">
+                    <p id="addOne"></p>
+                    <p id="addTwo"></p>
+                    <p id="addThree"></p>
+                </div>
+                <div class="add-ons-prices">
+                    <p id="firstAddPrice"></p>
+                    <p id="secondAddPrice"></p>
+                    <p id="thirdAddPrice"></p>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="total"><p>Total</p><h4 id="totalCosts">+$12/mo</h4></div>
+
+            <div class="nextBack">
+                <div class="nextBackBtns">
+                    <p href="#" id="backToStepThree">Go Back</p>
+                    <div class="nextBtn stepNextBtn" id="submit">Confirm</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="stepMain stepConfirmed" id="confirmed">
+        <div class="steps">
+
+            <div class="stepDesc">
+                <div class="stepNum">
+                    <p>1</p>
+                </div>
+                <div class="stepName">
+                    <p>STEP 1</p>
+                    <h5>YOUR INFO</h5>
+                </div>
+            </div>
+            <div class="stepDesc">
+                <div class="stepNum">
+                    <p>2</p>
+                </div>
+                <div class="stepName">
+                    <p>STEP 2</p>
+                    <h5>SELECT PLAN</h5>
+                </div>
+            </div>
+            <div class="stepDesc">
+                <div class="stepNum">
+                    <p>3</p>
+                </div>
+                <div class="stepName">
+                    <p>STEP 3</p>
+                    <h5>ADD-ONS</h5>
+                </div>
+            </div>
+            <div class="stepDesc">
+                <div class="currentStep stepNum">
+                    <p>4</p>
+                </div>
+                <div class="stepName">
+                    <p>STEP 4</p>
+                    <h5>SUMMARY</h5>
+                </div>
+            </div>
+
+        </div>
+        <div class="stepThankYou">
+            <img src="./images/icon-thank-you.svg" alt="">
+            <h1>Thank you!</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, tempore minima maiores minus incidunt aut
+                quisquam eius veritatis accusantium voluptas architecto.
+            </p>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
